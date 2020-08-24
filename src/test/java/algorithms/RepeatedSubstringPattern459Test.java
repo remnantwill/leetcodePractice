@@ -15,8 +15,14 @@ class RepeatedSubstringPattern459Test {
     private RepeatedSubstringPattern459 repeatedSubstringPattern459;
 
     @Test
-    void testMinimumDepthOfBinaryTree111() {
-        boolean match = repeatedSubstringPattern459.repeatedSubstringPattern("abab");
+    void testRepeatedSubstringPattern() {
+        boolean match = repeatedSubstringPattern459.repeatedSubstringPattern("abcdabcd");
+        System.out.println(match);
+    }
+
+    @Test
+    void testRepeatedSubstringPattern2() {
+        boolean match = repeatedSubstringPattern459.repeatedSubstringPattern2("abcdabcd");
         System.out.println(match);
     }
 

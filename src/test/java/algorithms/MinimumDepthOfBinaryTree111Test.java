@@ -15,7 +15,7 @@ class MinimumDepthOfBinaryTree111Test {
     private MinimumDepthOfBinaryTree111 minimumDepthOfBinaryTree111;
 
     @Test
-    void testMinimumDepthOfBinaryTree111() {
+    void testMinDepth() {
         String str = "[3,9,20,null,null,15,7]";
 
         TreeNode treeNode = TreeNode.mkTree(str);

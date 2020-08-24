@@ -14,8 +14,9 @@ class Minesweeper529Test {
 	private Minesweeper529 minesweeper529;
 
 	@Test
-	void testMinesweeper529() {
-		char[][] board = new char[][] {{'E','E','E','E','E'}, {'E','E','M','E','E'}, {'E','E','E','E','E'}, {'E','E','E','E','E'}};
+	void testUpdateBoard() {
+		char[][] board = new char[][] {{'E','E','E','E','E'}, {'E','E','M','E','E'},
+				{'E','E','E','E','E'}, {'E','E','E','E','E'}};
 		int[] click = new int[] {3,0};
 
 		char[][] updateBoard = minesweeper529.updateBoard(board, click);
