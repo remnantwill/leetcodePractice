@@ -1,56 +1,43 @@
 package Bean;
 
-
 public class TreeNode {
     public int val;
     public TreeNode left;
     public TreeNode right;
 
-    TreeNode(int x) {
+    private TreeNode(int x) {
         val = x;
     }
 
-    public String toString() {
-        return Integer.toString(val);
-    }
-
-    // int []arr = {3, 9, 20, Integer.MAX_VALUE, Integer.MAX_VALUE, 15, 7};
-    private static int[] StrToIntArray(String str) {
-        str = str.substring(1, str.length() - 1);
-        String[] strs = str.split(",");
-        int[] arr = new int[strs.length];
-
-        for (int i = 0; i < arr.length; i++) {
-            if (strs[i].equals("null")) {
-                arr[i] = Integer.MAX_VALUE;
+    public static TreeNode makeTree(Integer[] trees) {
+        TreeNode[] treeNodes = new TreeNode[trees.length + 1];
+        for (int i = 1; i < treeNodes.length; i++) {
+            if (trees[i - 1] == null) {
+                treeNodes[i] = null;
             } else {
-                arr[i] = Integer.parseInt(strs[i]);
+                treeNodes[i] = new TreeNode(trees[i - 1]);
             }
         }
-
-        return arr;
+        TreeNode treeNode = null;
+        for (int i = 1; i <= treeNodes.length / 2; i++) {
+            treeNode = treeNodes[i];
+            if (treeNode == null)
+                continue;
+            treeNode.left = treeNodes[2 * i];
+            if (2 * i + 1 < treeNodes.length)
+                treeNode.right = treeNodes[2 * i + 1];
+        }
+        return treeNodes[1];
     }
 
-    // String str = "[3,9,20,null,null,15,7]";
-    public static TreeNode mkTree(String str) {
-
-        int[] arr = StrToIntArray(str);
-        TreeNode[] nodes = new TreeNode[arr.length + 1];
-        for (int i = 1; i < nodes.length; i++) {
-            if (arr[i - 1] != Integer.MAX_VALUE) {
-                nodes[i] = new TreeNode(arr[i - 1]);
-            } else {
-                nodes[i] = null;
-            }
+    //中序遍历，检查树的创建是否正确
+    public static void middleTraverse(TreeNode treeNode) {
+        if (treeNode != null) {
+            System.out.println(treeNode.val);
+            middleTraverse(treeNode.left);
+            middleTraverse(treeNode.right);
+        } else {
+            System.out.println("null");
         }
-
-        TreeNode node = null;
-        for (int i = 1; i < nodes.length / 2; i++) {
-            node = nodes[i];
-            if (node == null) continue;
-            node.left = nodes[2 * i];
-            node.right = nodes[2 * i + 1];
-        }
-        return nodes[1];
     }
 }

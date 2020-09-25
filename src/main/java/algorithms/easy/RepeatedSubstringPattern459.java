@@ -1,4 +1,4 @@
-package algorithms;
+package algorithms.easy;
 
 /**
  * https://leetcode-cn.com/problems/repeated-substring-pattern/

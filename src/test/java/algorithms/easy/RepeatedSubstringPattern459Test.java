@@ -1,6 +1,6 @@
-package algorithms;
+package algorithms.easy;
 
-import Bean.TreeNode;
+import algorithms.easy.RepeatedSubstringPattern459;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

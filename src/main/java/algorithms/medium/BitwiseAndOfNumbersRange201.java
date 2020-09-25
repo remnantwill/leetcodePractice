@@ -1,4 +1,4 @@
-package algorithms;
+package algorithms.medium;
 
 /**
  * https://leetcode-cn.com/problems/bitwise-and-of-numbers-range/

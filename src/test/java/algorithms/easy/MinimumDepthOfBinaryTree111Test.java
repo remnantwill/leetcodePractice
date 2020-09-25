@@ -1,4 +1,4 @@
-package algorithms;
+package algorithms.easy;
 
 import Bean.TreeNode;
 import org.junit.jupiter.api.Test;
@@ -16,10 +16,8 @@ class MinimumDepthOfBinaryTree111Test {
 
     @Test
     void testMinDepth() {
-        String str = "[3,9,20,null,null,15,7]";
-
-        TreeNode treeNode = TreeNode.mkTree(str);
-
+        Integer[] array = {3,9,20,null,null,15,7};
+        TreeNode treeNode = TreeNode.makeTree(array);
         int minDepth = minimumDepthOfBinaryTree111.minDepth(treeNode);
         System.out.println(String.format("The min depth is %s", minDepth));
     }
