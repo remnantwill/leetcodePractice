@@ -6,7 +6,7 @@ package algorithms.medium;
 public class LeavesCollectionLCP19 {
 
     public int minimumOperations(String leaves) {
-
+        return 0;
     }
 
 }
