@@ -9,7 +9,7 @@ import java.util.Set;
 public class NQueensII52 {
 
     /**
-     * backtracking solution
+     * solution I: Set based backtracking
      * @param n
      * @return
      */
@@ -47,6 +47,15 @@ public class NQueensII52 {
             }
             return count;
         }
+    }
+
+    /**
+     * solution II: bit operations based Backtracking
+     * @param n
+     * @return
+     */
+    public int totalNQueensII(int n) {
+        return 0;
     }
 
 }
