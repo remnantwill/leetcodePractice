@@ -55,4 +55,51 @@ public class PalindromeLinkedList234 {
         }
         return true;
     }
+
+    /**
+     * solution III: slow/fast pointer
+     * @param head
+     * @return
+     */
+    public boolean isPalindromeIII(ListNode head) {
+        if (head == null) {
+            return true;
+        }
+        ListNode firstHalfEnd = findFirstHalfEnd(head);
+        ListNode secondHalfStart = reverseList(firstHalfEnd.next);
+
+        ListNode p1 = head, p2 = secondHalfStart;
+        boolean ans = true;
+        while (ans && p2 != null) {
+            if (p1.val != p2.val) {
+                return false;
+            }
+            p1 = p1.next;
+            p2 = p2.next;
+        }
+        firstHalfEnd.next = reverseList(secondHalfStart);
+        return ans;
+    }
+
+    private ListNode reverseList(ListNode head) {
+        ListNode cur = head;
+        ListNode prev = null;
+        while (cur != null) {
+            ListNode nextTmp = cur.next;
+            cur.next = prev;
+            prev = cur;
+            cur = nextTmp;
+        }
+        return prev;
+    }
+
+    private ListNode findFirstHalfEnd(ListNode head) {
+        ListNode fast = head;
+        ListNode slow = head;
+        while (fast.next != null && fast.next.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+        return slow;
+    }
 }
