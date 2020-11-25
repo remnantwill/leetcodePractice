@@ -27,4 +27,18 @@ class SortList148Test {
             node = node.next;
         }
     }
+
+    @Test
+    void sortListTestII() {
+        ListNode head = new ListNode(4);
+        head.next = new ListNode(2);
+        head.next.next = new ListNode(1);
+        head.next.next.next = new ListNode(3);
+        ListNode ans = instance.sortListII(head);
+        ListNode node = ans;
+        while (node != null) {
+            System.out.println(node.val);
+            node = node.next;
+        }
+    }
 }
