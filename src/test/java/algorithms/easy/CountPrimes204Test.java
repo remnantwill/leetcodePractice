@@ -15,9 +15,25 @@ public class CountPrimes204Test {
 
     @Test
     public void countPrimesTest() {
+//        int n = 10;
+        int n = 2;
+        int ans = instance.countPrimes(n);
+        System.out.println(ans);
+    }
+
+    @Test
+    public void countPrimesTestII() {
         int n = 10;
 //        int n = 2;
-        int ans = instance.countPrimes(n);
+        int ans = instance.countPrimesII(n);
+        System.out.println(ans);
+    }
+
+    @Test
+    public void countPrimesTestIII() {
+        int n = 10;
+//        int n = 2;
+        int ans = instance.countPrimesIII(n);
         System.out.println(ans);
     }
 
