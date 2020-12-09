@@ -19,4 +19,11 @@ public class ReorganizeString767Test {
         String ans = instance.reorganizeString(S);
         System.out.println(ans);
     }
+
+    @Test
+    public void reorganizeStringTestII() {
+        String S = "ebbbcccecc";
+        String ans = instance.reorganizeStringII(S);
+        System.out.println(ans);
+    }
 }

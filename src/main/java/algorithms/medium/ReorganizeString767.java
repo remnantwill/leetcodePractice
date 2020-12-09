@@ -7,6 +7,11 @@ import java.util.PriorityQueue;
  */
 public class ReorganizeString767 {
 
+    /**
+     * solution I: Greedy algorithm based on max heap
+     * @param S
+     * @return
+     */
     public String reorganizeString(String S) {
         if (S.length() < 2) {
             return S;
@@ -50,6 +55,45 @@ public class ReorganizeString767 {
             sb.append(queue.poll());
         }
         return sb.toString();
+    }
+
+    /**
+     * solution II: Greedy algorithm based on counting
+     * @param S
+     * @return
+     */
+    public String reorganizeStringII(String S) {
+        if (S.length() < 2) {
+            return S;
+        }
+        int[] counts = new int[26];
+        int maxCount = 0;
+        int length = S.length();
+        for (int i = 0; i < length; i++) {
+            char c = S.charAt(i);
+            counts[c - 'a']++;
+            maxCount = Math.max(maxCount, counts[c - 'a']);
+        }
+        if (maxCount > (length + 1) / 2) {
+            return "";
+        }
+        int evenIndex = 0, oddIndex = 1;
+        char[] reorganizeArray = new char[length];
+        int halfLength = length / 2;
+        for (int i = 0; i < 26; i++) {
+            char c = (char) ('a' + i);
+            while (counts[i] > 0 && counts[i] <= halfLength && oddIndex < length) {
+                reorganizeArray[oddIndex] = c;
+                counts[i]--;
+                oddIndex += 2;
+            }
+            while (counts[i] > 0) {
+                reorganizeArray[evenIndex] = c;
+                counts[i]--;
+                evenIndex += 2;
+            }
+        }
+        return new String(reorganizeArray);
     }
 
 }
