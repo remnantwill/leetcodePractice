@@ -3,6 +3,9 @@ package algorithms.easy;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * https://leetcode-cn.com/problems/pascals-triangle/
+ */
 public class PascalsTriangle118 {
     public List<List<Integer>> generate(int numRows) {
         List<List<Integer>> ret = new ArrayList<>();

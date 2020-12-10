@@ -3,6 +3,9 @@ package algorithms.medium;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * https://leetcode-cn.com/problems/split-array-into-fibonacci-sequence/
+ */
 public class SplitArrayIntoFibonacciSequence842 {
 
     public List<Integer> splitIntoFibonacci(String S) {

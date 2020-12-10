@@ -2,6 +2,9 @@ package algorithms.easy;
 
 import java.util.Arrays;
 
+/**
+ * https://leetcode-cn.com/problems/largest-perimeter-triangle/
+ */
 public class LargestPerimeterTriangle976 {
 
     public int largestPerimeter(int[] A) {
