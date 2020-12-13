@@ -20,4 +20,12 @@ public class TaskScheduler621Test {
         int ans = instance.leastInterval(tasks, n);
         System.out.println(ans);
     }
+
+    @Test
+    public void leastIntervalTestII() {
+        char[] tasks = new char[] { 'A', 'A', 'A', 'B', 'B', 'B' };
+        int n = 2;
+        int ans = instance.leastIntervalII(tasks, n);
+        System.out.println(ans);
+    }
 }
