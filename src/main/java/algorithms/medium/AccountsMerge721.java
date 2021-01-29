@@ -1,5 +1,7 @@
 package algorithms.medium;
 
+import Bean.UnionFind;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -56,22 +58,4 @@ public class AccountsMerge721 {
         return merged;
     }
 
-}
-
-class UnionFind {
-    int[] parent;
-    public UnionFind(int n) {
-        parent = new int[n];
-        for (int i = 0; i < n; i++) {
-            parent[i] = i;
-        }
-    }
-
-    public void union(int index1, int index2) {
-        parent[find(index2)] = find(index1);
-    }
-
-    public int find(int x) {
-        return parent[x] == x ? parent[x] : (parent[x] = find(parent[x]));
-    }
 }
