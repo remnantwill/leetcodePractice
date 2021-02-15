@@ -42,4 +42,8 @@ public class UnionFind {
         y = find(y);
         return x == y;
     }
+
+    public int getSetCount() {
+        return setCount;
+    }
 }
