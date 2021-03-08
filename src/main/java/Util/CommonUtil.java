@@ -34,4 +34,20 @@ public class CommonUtil {
         }
         return sb.toString();
     }
+
+    public static String printStrListInLine(List<String> input) {
+        if (input == null) {
+            return null;
+        }
+        StringBuffer sb = new StringBuffer();
+        for (int i = 0; i < input.size(); i++) {
+            if (i != input.size() - 1) {
+                sb.append(input.get(i));
+                sb.append(", ");
+            } else {
+                sb.append(input.get(i));
+            }
+        }
+        return sb.toString();
+    }
 }
