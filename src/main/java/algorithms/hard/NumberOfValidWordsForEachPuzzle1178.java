@@ -106,14 +106,14 @@ public class NumberOfValidWordsForEachPuzzle1178 {
         cur.frequency++;
     }
 
-}
+    private class TrieNode {
+        int frequency;
+        TrieNode[] child;
 
-class TrieNode {
-    int frequency;
-    TrieNode[] child;
-
-    public TrieNode() {
-        frequency = 0;
-        child = new TrieNode[26];
+        public TrieNode() {
+            frequency = 0;
+            child = new TrieNode[26];
+        }
     }
+
 }
