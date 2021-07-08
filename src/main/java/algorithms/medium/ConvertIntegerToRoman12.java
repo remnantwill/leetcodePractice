@@ -3,7 +3,7 @@ package algorithms.medium;
 /**
  * https://leetcode-cn.com/problems/integer-to-roman/
  */
-public class IntegerToRoman12 {
+public class ConvertIntegerToRoman12 {
 
     /**
      * solution I: simulation
